@@ -1,12 +1,25 @@
 define(function(require, exports, module){
 
+$(function(){
+    $('#viewport').height(window.innerHeight + 'px');
+});
+
 seajs.config({
     base: '/scripts/',
     timeout: 1000
 });
-require.async('login', function( login ){
-    login.init();
-    window.scrollTo(0, 0);
-});
+
+exports.login = function(){
+    require.async('login', function(module){
+        module.init();
+    });
+}
+exports.chat = function(){
+    require.async('chat', function(module){
+        module.init();
+    });
+}
+
+exports.login();
 
 });

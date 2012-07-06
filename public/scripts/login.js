@@ -7,10 +7,10 @@ define(function(require, exports, module){
             $v.show();
             var $passport = $v.find('input[name=passport]');
             var $password = $v.find('input[name=password]');
-            var $login = $v.find('input[name=login]');
-            var $reset = $v.find('input[name=reset]');
+            var $login = $v.find('button[name=login]');
+            var $reset = $v.find('button[name=reset]');
             
-            g($login).tap(function(){
+            g($login).tap(function(e){
                 var passport = $passport.val();
                 var password = $password.val();
                 if(!passport && !password){
@@ -28,7 +28,11 @@ define(function(require, exports, module){
                         passport: passport,
                         password: password
                     }, function(data){
-                        
+                        if(data.code === 0){
+                            localStorage.setItem('passport', passport);
+                            require('app').chat();
+                            $v.hide();
+                        }
                     })
                 });
             });
