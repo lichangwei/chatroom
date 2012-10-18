@@ -1,15 +1,19 @@
+html, body{
+  height: 100%;
+}
 
 body, div, p, ul, ol, h1, h2, h3, h4, h5, h6, article, section, aside, nav{
   margin: 0;
   padding: 0;
 }
+
 ol{
     list-style: none;
 }
 
 #viewport{
     position: relative;
-    width: 100%;
+    height: 100%;
 }
 #viewport >section{
     position: absolute;
@@ -17,15 +21,50 @@ ol{
     height: 100%;
     display: none;
 }
-#viewport >section:active{
+#viewport >section.active{
     display: block;
 }
 
-#chat >div{
-    postion: absolute;
-    bottom: 0;
-    margin: 9px auto 0;
+[class^=span]{
+    display: inline-block;
+    margin-left: 2%;
+    margin-left: -webkit-calc(10px);
+    margin-left:    -moz-calc(10px);
+    margin-left:         calc(10px);
 }
-#chat button[name=send]{
-    margin-bottom: 9px;
+.span1{
+    width: 14.3%;
+    width: -webkit-calc((100% - 70px)/6);
+    width:    -moz-calc((100% - 70px)/6);
+    width:         calc((100% - 70px)/6);
+}
+.span2{
+    width: 30.6%;
+    width: -webkit-calc((100% - 70px)/3);
+    width:    -moz-calc((100% - 70px)/3);
+    width:         calc((100% - 70px)/3);
+}
+.span3{
+    width: 47%;
+    width: -webkit-calc((100% - 70px)/2 + 10px);
+    width:    -moz-calc((100% - 70px)/2 + 10px);
+    width:         calc((100% - 70px)/2 + 10px);
+}
+.span4{
+    width: 63.4%;
+    width: -webkit-calc((100% - 70px)/1.5 + 20px);
+    width:    -moz-calc((100% - 70px)/1.5 + 20px);
+    width:         calc((100% - 70px)/1.5 + 20px);
+}
+.span5{
+    width: 79.7%;
+    width: -webkit-calc((100% - 70px)/6*5 + 30px);
+    width:    -moz-calc((100% - 70px)/6*5 + 30px);
+    width:         calc((100% - 70px)/6*5 + 30px);
+}
+.span6{
+    width: 96%;
+    width: -webkit-calc(100% - 20px);
+    width:    -moz-calc(100% - 20px);
+    width:         calc(100% - 20px);
 }

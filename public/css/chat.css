@@ -1,0 +1,14 @@
+#chat >div{
+    position: absolute;
+    height: 40px;
+    width: 100%;
+    bottom: 5px;
+    font-size: 0;
+}
+#chat >div >*{
+    height: 90%;
+    font-size: 14px;
+}
+#chat button[name=send]{
+    margin-bottom: 9px;
+}

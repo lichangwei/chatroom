@@ -28,7 +28,7 @@ define(function(require, exports, module){
                         passport: passport,
                         password: password
                     }, function(data){
-                        if(data.code === 0){
+                        if(data.code === 200){
                             localStorage.setItem('passport', passport);
                             require('app').chat();
                             $v.hide();

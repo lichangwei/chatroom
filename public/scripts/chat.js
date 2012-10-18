@@ -107,8 +107,4 @@ function info( msg ){
     $msglist[0].scrollTop = $msglist[0].scrollHeight;
 }
 
-$(window).resize(function(){
-    $msglist.height(this.innerHeight - 50);
-});
-
 });
