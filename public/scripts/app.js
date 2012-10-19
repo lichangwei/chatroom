@@ -1,25 +1,22 @@
 define(function(require, exports, module){
 
-$(function(){
-    $('#viewport').height(window.innerHeight + 'px');
-});
-
 seajs.config({
     base: '/scripts/',
     timeout: 1000
 });
 
-exports.login = function(){
-    require.async('login', function(module){
-        module.init();
-    });
-}
-exports.chat = function(){
-    require.async('chat', function(module){
-        module.init();
-    });
-}
+['login', 'chat'].forEach(function( modulename ){
+    exports[modulename] = function(){
+        require.async(modulename, function(module){
+            module.init();
+        });
+    }
+});
 
 exports.login();
+
+// document.addEventListener('touchmove', function(e){
+    // e.preventDefault();
+// }, false);
 
 });

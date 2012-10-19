@@ -3,14 +3,10 @@
 }
 
 #login div{
-    font-size: 0px;
+    font-size: 0;
     text-align: center;
 }
 
 #login label{
     text-align: right;
-}
-
-#login label, #login input{
-    font-size: 20px;
 }

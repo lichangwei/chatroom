@@ -1,10 +1,13 @@
-html, body{
-  height: 100%;
+
+*{
+    margin: 0;
+    padding: 0;
 }
 
-body, div, p, ul, ol, h1, h2, h3, h4, h5, h6, article, section, aside, nav{
-  margin: 0;
-  padding: 0;
+html, body{
+    height: 100%;
+    font-size: 16px;
+    -webkit-text-size-adjust: none;
 }
 
 ol{
@@ -31,6 +34,7 @@ ol{
     margin-left: -webkit-calc(10px);
     margin-left:    -moz-calc(10px);
     margin-left:         calc(10px);
+    font-size: 1rem;
 }
 .span1{
     width: 14.3%;

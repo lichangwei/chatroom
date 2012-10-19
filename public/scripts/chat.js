@@ -33,6 +33,8 @@ module.exports = {
             }
         });
         $('button[name=send]').click( send );
+        
+        //g($msglist).scrollvertical(function(){});
     },
     
     connect: function(){

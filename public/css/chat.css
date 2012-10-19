@@ -1,14 +1,41 @@
+#chat ol{
+    height: -webkit-calc(100% - 55px);
+    height:    -moz-calc(100% - 55px);
+    height:         calc(100% - 55px);
+    overflow-y: scroll;
+}
+
 #chat >div{
     position: absolute;
     height: 40px;
     width: 100%;
-    bottom: 5px;
+    margin: 5px 0;
     font-size: 0;
+    background: #E2E2E2;
 }
 #chat >div >*{
+    display: inline-block;
     height: 90%;
-    font-size: 14px;
+    font-size: 1rem;
+    margin-left: 2%;
 }
-#chat button[name=send]{
-    margin-bottom: 9px;
+
+#chat select{
+    width: 30%;
+}
+
+#chat input{
+    position: absolute;
+    width: 40%;
+}
+#chat input:focus{
+    
+    left: 0;
+    width: 72%;
+}
+
+#chat button{
+    position: absolute;
+    right: 2%;
+    width: 22%;
 }

@@ -15,11 +15,11 @@
                 <form>
                     <div>
                         <label>账号：</label>
-                        <input name="passport" class="span3">
+                        <input name="passport" class="span3" autocapitalize="off">
                     </div>
                     <div>
                         <label>密码：</label>
-                        <input name="password" type="password"  class="span3">
+                        <input name="password" type="password"  class="span3" autocapitalize="off">
                     </div>
                     <div>
                         <button name="login" type="button" class="span2">登录</button>
@@ -30,9 +30,9 @@
             <section id="chat">
                 <ol></ol>
                 <div>
-                    <select class="span2"></select>
-                    <input name="msg" class="span3" type="text"/>
-                    <button name="send" type="button" class="span1">发送</button>
+                    <select></select>
+                    <input name="msg" autocapitalize="off">
+                    <button name="send">发送</button>
                 </div>
             </section>
         </div>
@@ -40,8 +40,8 @@
         <script src="/scripts/sea.js"></script>
         <script src="/scripts/domtemp.js"></script>
         <script src="/scripts/gesture.js"></script>
+        <script src="/scripts/scroll.js"></script>
         <script src="/scripts/tap.js"></script>
-        <script src="/scripts/taphold.js"></script>
         <script src="/socket.io/socket.io.js"></script>
         <script>
             seajs.use(["./scripts/app"]);
