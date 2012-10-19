@@ -5,8 +5,13 @@
 #login div{
     font-size: 0;
     text-align: center;
+    margin: 10px 0;
 }
 
 #login label{
     text-align: right;
+}
+
+#login label, #login input{
+    font-size: 1.2rem;
 }
